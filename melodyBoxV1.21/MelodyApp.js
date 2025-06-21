@@ -23,14 +23,16 @@ class MelodyApp {
 
         // console.log(Object.keys(this.sto).length);
         console.log(this.sto);
-        if(this.sto === null || Object.keys(this.sto).length !== 3){
+        if(this.sto === null || Object.keys(this.sto).length !== 4){
             this.sto = {
+                type: "sine",
                 key: 0,
                 bpm: 60,
                 cord: "0x0x0x0",
             }
             console.log("データが初期状態です:(");
         }else{
+            this.$type.value = this.sto.type;
             this.$key.value = this.sto.key;
             this.$bpm.value = this.sto.bpm;
             console.log("ロードしました:)");
@@ -89,6 +91,14 @@ class MelodyApp {
                 this.isPlaying = false;
             };
             
+        });
+
+        //タイプ変更
+        this.$type.addEventListener("input", ()=> {
+            this.sto.type = this.$type.value;
+
+            //ストレージ保存
+            localStorage.setItem("sto", JSON.stringify(this.sto));
         });
 
         //key変更
