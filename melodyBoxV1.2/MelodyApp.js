@@ -44,9 +44,7 @@ class MelodyApp {
 
 
         this.bindUI();
-        this.Compile(this.storage === undefind ? this.cord:
-                     this.storage.melody === undefind || this.storage.melody === '' ? this.cord:
-                     this.storage.melody);
+        this.Compile(this.storage === undefined ? this.cord: this.storage.melody);
         this.renderBox();
         this.export();
 
