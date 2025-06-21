@@ -1,0 +1,8 @@
+body, html{
+    margin: 0;
+}
+
+button {
+    width: 75px;
+    height: 75px;
+}
