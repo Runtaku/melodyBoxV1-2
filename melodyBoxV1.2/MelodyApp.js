@@ -43,6 +43,8 @@ class MelodyApp {
         this.borderColor = this.style.getPropertyValue("--borderColor").trim();
 
 
+        console.log(this.storage);
+        
         this.bindUI();
         this.Compile(this.storage === undefined ? this.cord: this.storage.melody);
         this.renderBox();
