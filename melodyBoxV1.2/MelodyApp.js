@@ -30,8 +30,6 @@ class MelodyApp {
 
         this.scale     = 36; 
         this.cord      = "0x0x0x0";
-
-        console.log(this.storage)
         
         //CSS変数
         this.root = document.documentElement;
@@ -44,11 +42,11 @@ class MelodyApp {
 
 
         this.bindUI();
-        this.Compile(this.storage === nal ? this.cord :this.storage.melody);
+        this.Compile(this.storage === undefind ? this.cord :this.storage.melody);
         this.renderBox();
         this.export();
 
-        //console.log(this.storage.melody)
+        console.log(this.storage);
     }
 
     bindUI(){
