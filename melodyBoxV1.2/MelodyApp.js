@@ -46,7 +46,7 @@ class MelodyApp {
         console.log(this.storage);
         
         this.bindUI();
-        this.Compile(this.storage === undefined ? this.cord: this.storage.melody);
+        this.Compile(this.storage === null ? this.cord: this.storage.melody);
         this.renderBox();
         this.export();
 
