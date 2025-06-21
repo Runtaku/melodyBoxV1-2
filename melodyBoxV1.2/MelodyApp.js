@@ -42,7 +42,7 @@ class MelodyApp {
 
 
         this.bindUI();
-        this.Compile(this.storage.melody == undefined ? this.cord :this.storage.melody);
+        this.Compile(this.storage.melody == null ? this.cord :this.storage.melody);
         this.renderBox();
         this.export();
 
