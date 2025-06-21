@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>melodyBoxV1.21</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <button class="material-icons" id="play">play_arrow</button>
+    
+        <label for="option">Type</label>
+        <select id="option">
+            <option value="sine">サイン波</option>
+            <option value="square">矩形波</option>
+            <option value="triangle">三角波</option>
+            <option value="sawtooth">ノコギリ波</option>
+        </select>
+        
+        <label for="checkBox">Loop</label>
+        <input type="checkbox" id="loop" value="1">
+    
+        <label for="checkBox"></label>
+        <div id="adButton">
+            <button class="material-icons" id="delete">remove</button>
+            <button class="material-icons" id="add">add</button>
+        </div>
+    
+        <label for="key">Key</label>
+        <input type="number" id="key" value="0" step="1">
+
+        <label for="BPM">BPM</label>
+        <input type="number" id="BPM" value="60">
+        
+    </header>
+    
+    <div id="box"></div>
+
+    <footer>
+        <textarea id="export"></textarea>
+        <button id="compile">読み取り</button>
+    </footer>
+
+    <script type="module" src="MelodyApp.js"></script>
+</body>
+</html>
