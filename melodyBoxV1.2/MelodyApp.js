@@ -46,7 +46,7 @@ class MelodyApp {
         this.renderBox();
         this.export();
 
-        //console.log(this.storage);
+        console.log(this.storage);
     }
 
     bindUI(){
