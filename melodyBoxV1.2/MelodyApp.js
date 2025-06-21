@@ -31,7 +31,7 @@ class MelodyApp {
         this.scale     = 36; 
         this.cord      = "0x0x0x0";
 
-        console.log(this.storage);
+        //console.log(this.storage);
         
         //CSS変数
         this.root = document.documentElement;
