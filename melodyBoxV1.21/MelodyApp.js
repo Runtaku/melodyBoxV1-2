@@ -24,9 +24,11 @@ class MelodyApp {
         // console.log(Object.keys(this.sto).length);
         console.log(this.sto);
         if(this.sto === null || Object.keys(this.sto).length !== 3){
-            this.sto.key = 0;
-            this.sto.bpm = 60;
-            this.sto.cord = "0x0x0x0";
+            this.sto = {
+                key: 0,
+                bpm: 60,
+                cord: "0x0x0x0",
+            }
             console.log("データが初期状態です:(");
         }else{
             this.$key.value = this.sto.key;
